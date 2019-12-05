@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/support_toolbar"/>
+
+    <RelativeLayout
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/personNameText"
+            android:text="Person Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/personAgeText"
+            android:text="Person Age"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/personNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/personImageView"
+            android:layout_margin="10dp"
+            android:layout_below="@id/personNameText"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/loadFromGallery"
+            android:text="loadFromGallery"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:onClick="loadImageFromGalleryClick"
+            android:textAllCaps="false"
+            android:layout_below="@id/personImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Load"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:onClick="loadDataClick"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="Save"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:onClick="insertPersonClick"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="Update"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:onClick="updatePersonClick"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="Remove"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:onClick="removePersonClick"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/searchPersonEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Next"
+            android:onClick="nextClick"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="Previous"
+            android:onClick="previousClick"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
